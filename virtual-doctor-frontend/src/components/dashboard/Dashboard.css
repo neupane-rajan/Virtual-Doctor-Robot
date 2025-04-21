@@ -1,0 +1,417 @@
+/* Dashboard.css */
+.dashboard-container {
+    padding-top: 100px; /* Account for fixed header */
+  }
+  
+  /* Welcome banner */
+  .welcome-banner {
+    background: linear-gradient(135deg, #4361ee, #3a0ca3);
+    border-radius: 15px;
+    padding: 30px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(67, 97, 238, 0.3);
+  }
+  
+  .welcome-banner:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background: url('https://cdn-icons-png.flaticon.com/512/3774/3774299.png') no-repeat;
+    background-position: right 20px center;
+    background-size: 180px;
+    opacity: 0.1;
+  }
+  
+  .welcome-message {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
+  }
+  
+  .welcome-stats {
+    display: flex;
+    margin-top: 25px;
+  }
+  
+  .stat-item {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-right: 15px;
+    transition: all 0.3s ease;
+  }
+  
+  .stat-item:last-child {
+    margin-right: 0;
+  }
+  
+  .stat-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+  }
+  
+  .stat-icon {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .stat-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  
+  .stat-label {
+    font-size: 0.85rem;
+    opacity: 0.8;
+  }
+  
+  /* Cards styling */
+  .dashboard-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .dashboard-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+  }
+  
+  .dashboard-card .card-header {
+    background: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 1rem 1.25rem;
+  }
+  
+  .card-header-title {
+    display: flex;
+    align-items: center;
+  }
+  
+  .card-header-title i {
+    color: #4361ee;
+    font-size: 1.2rem;
+  }
+  
+  .card-header-title h5 {
+    margin-bottom: 0;
+    font-weight: 600;
+  }
+  
+  .card-body-modern {
+    padding: 1.25rem;
+  }
+  
+  .card-footer-modern {
+    background-color: white;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 0.75rem;
+  }
+  
+  /* List styling */
+  .modern-list {
+    margin: 0 -1.25rem;
+  }
+  
+  .modern-list-item {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 1rem 1.25rem;
+    transition: all 0.2s ease;
+  }
+  
+  .modern-list-item:last-child {
+    border-bottom: none;
+  }
+  
+  .modern-list-item:hover {
+    background-color: rgba(67, 97, 238, 0.03);
+  }
+  
+  .item-title {
+    font-weight: 500;
+    color: #212529;
+    margin-bottom: 0.25rem;
+  }
+  
+  .item-details {
+    color: #6c757d;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Badge styling */
+  .custom-badge {
+    background: linear-gradient(45deg, #4361ee, #3a0ca3);
+    border-radius: 20px;
+    padding: 0.35em 0.8em;
+    font-weight: 500;
+    font-size: 0.75rem;
+  }
+  
+  .emergency-badge {
+    background: linear-gradient(45deg, #e63946, #d00000);
+    border-radius: 20px;
+    padding: 0.35em 0.8em;
+    font-weight: 500;
+  }
+  
+  /* Medication styling */
+  .medication-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .medication-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(67, 97, 238, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 1.2rem;
+    color: #4361ee;
+  }
+  
+  .medication-details {
+    flex: 1;
+  }
+  
+  /* Appointment styling */
+  .appointments-list .modern-list-item {
+    padding: 1.2rem 1.25rem;
+  }
+  
+  .appointment-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(67, 97, 238, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 1.2rem;
+    color: #4361ee;
+  }
+  
+  .appointment-details {
+    flex: 1;
+  }
+  
+  /* Empty state styling */
+  .empty-state {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  
+  .empty-icon {
+    font-size: 2.5rem;
+    color: #e9ecef;
+    margin-bottom: 1rem;
+  }
+  
+  .empty-state p {
+    color: #adb5bd;
+    margin-bottom: 1rem;
+  }
+  
+  /* Button styling consistent with header */
+  .btn-modern {
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .btn-primary.btn-modern {
+    background: linear-gradient(45deg, #4361ee, #3a0ca3);
+    border: none;
+    box-shadow: 0 4px 10px rgba(67, 97, 238, 0.3);
+  }
+  
+  .btn-primary.btn-modern:hover {
+    background: linear-gradient(45deg, #3a0ca3, #4361ee);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(67, 97, 238, 0.4);
+  }
+  
+  .btn-success.btn-modern {
+    background: linear-gradient(45deg, #2a9d8f, #168aad);
+    border: none;
+    box-shadow: 0 4px 10px rgba(42, 157, 143, 0.3);
+  }
+  
+  .btn-success.btn-modern:hover {
+    background: linear-gradient(45deg, #168aad, #2a9d8f);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(42, 157, 143, 0.4);
+  }
+  
+  .btn-outline-primary.btn-modern {
+    border-color: #4361ee;
+    color: #4361ee;
+  }
+  
+  .btn-outline-primary.btn-modern:hover {
+    background-color: rgba(67, 97, 238, 0.08);
+    border-color: #4361ee;
+    color: #4361ee;
+    transform: translateY(-2px);
+  }
+  
+  /* Link styling */
+  .view-all-link {
+    color: #4361ee;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .view-all-link:hover {
+    color: #3a0ca3;
+  }
+  
+  .view-all-link i {
+    transition: all 0.2s ease;
+  }
+  
+  .view-all-link:hover i {
+    transform: translateX(3px);
+  }
+  
+  /* Doctor chat section */
+  .doctor-chat-section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .chat-preview {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 15px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  .chat-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #2a9d8f, #168aad);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: white;
+    box-shadow: 0 10px 25px rgba(22, 138, 173, 0.3);
+    margin-right: 2rem;
+  }
+  
+  .chat-info {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .chat-info h5 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .chat-info p {
+    color: #6c757d;
+    margin-bottom: 0;
+  }
+  
+  .chat-btn {
+    margin-left: 2rem;
+    padding: 0.75rem 2rem;
+  }
+  
+  /* Loading spinner */
+  .loader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+  }
+  
+  .loader-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(67, 97, 238, 0.1);
+    border-radius: 50%;
+    border-top: 4px solid #4361ee;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 991.98px) {
+    .welcome-stats {
+      flex-direction: column;
+    }
+    
+    .stat-item {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+    
+    .stat-item:last-child {
+      margin-bottom: 0;
+    }
+    
+    .chat-preview {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .chat-icon {
+      margin-right: 0;
+      margin-bottom: 1.5rem;
+    }
+    
+    .chat-info {
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    
+    .chat-btn {
+      margin-left: 0;
+    }
+  }
+  
+  @media (max-width: 767.98px) {
+    .welcome-banner {
+      padding: 20px;
+    }
+    
+    .welcome-banner:before {
+      display: none;
+    }
+  }

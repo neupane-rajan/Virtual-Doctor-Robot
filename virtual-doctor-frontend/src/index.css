@@ -1,0 +1,79 @@
+/* Header styles */
+.navbar-nav .nav-link {
+  position: relative;
+  padding-bottom: 6px !important;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.fw-bold {
+  color: var(--primary-color) !important;
+}
+
+.navbar-nav .nav-link.fw-bold::after,
+.navbar-nav .nav-link:hover::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  bottom: 0;
+  left: 25%;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Profile avatar styles */
+.avatar-circle {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avatar-circle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Cards with hover effects */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 0.5rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer enhancements */
+footer a {
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: white !important;
+}
+
+/* Date display styles */
+.date-display {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.35rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.85rem;
+}
+
+/* Profile tab styling */
+.nav-tabs .nav-link {
+  border: none;
+  color: var(--secondary-color);
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--primary-color);
+  background: transparent;
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.nav-tabs .nav-link:hover:not(.active) {
+  border-bottom: 3px solid #e9ecef;
+}
